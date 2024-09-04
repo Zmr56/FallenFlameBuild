@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="0E000F10" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="0E000F10.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Main" width="15" height="15">
+  <properties>
+   <property name="ChapterID" value="3"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x13"/>
+   <property name="MapID" value="0x11"/>
+   <property name="ObjectType" value="0x3C"/>
+   <property name="PaletteID" value="0x68"/>
+   <property name="TileConfig" value="0x3E"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyN0c0uQ0EUwPGZ29iQ0L4ANhZIWvEABLHkESQtEhutxBO0FBsJa6vqh0hIG0tWbakQGx+JNUlJJBJPgP/JmZteFYnFL+fOuXPOfFVCxswbYyrEsGfMpNEY+Yc7ajJG44jLRRH7I2at6mnr0+1p7pE+q8SVgF2cYNT1ibk+foy6PS9T+4DbNmVP9ybz35Eklwr9jLNYwCIOsY887rFhlfQ+8n67wTr/srhCDXUMkO/AhdVvmSt7jCMhdx6Y489r2tZY+OOU1do0mlgLaf7DqBc0jfaQvD9+Y7znai8DvUv8myLGkUAenehCAUWZgzNqZqiN4sDq/yqxhjTfGdRdbYTcuZwDDZwyTgbqS3w/4RnbrD9IHAqcfZh4TD6LT3wZrff3Po0cXslfy9jVxmzrjiX2og/9sg61DWLBrVk2egY5e9HdnfTIuTcfY944NrGELatr+euIHWqsp3sJo+refM5qfbBW9uO/RcTtf8LTc/vvLfEbmoVnbw==
+  </data>
+ </layer>
+ <layer name="Chest1" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="2"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDCQAAAOEAAE=
+  </data>
+ </layer>
+ <layer name="Chest2" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDCQAAAOEAAE=
+  </data>
+ </layer>
+ <layer name="WallDestroyed" width="15" height="15" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDCQAAAOEAAE=
+  </data>
+ </layer>
+</map>
