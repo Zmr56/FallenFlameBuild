@@ -27,7 +27,7 @@
 //By Sme
 #define BloodTideID 255
 
-//Charisma: Grants +10 Hit/Avoid to all allies within three tiles.
+//Charisma: Grants +10 Hit/Avoid to all allies within two tiles.
 //By Darrman
 #define CharismaID 184
 
@@ -71,17 +71,19 @@
 //Author Unknown (Initial Commit)
 #define InspirationID 205
 
-//Divinely Inspiring: Adjacent allies deal +3 damage and receive -1 damage.
+//Divinely Inspiring: Adjacent allies deal +3 damage.
 //By Dragz
-#define DivinelyInspiringID 255
+#define DivinelyInspiringID 209
+#define HelpfulHandID 209
 
 //Intimidate: -10 Avoid to all enemies within 2 tiles.
 //Author Unknown (Initial Commit)
 #define IntimidateID 186
 
-//Lily's Poise: Adjacent allies gain +1/-3 damage dealt/received.
+//Lily's Poise: Adjacent allies gain -3 damage received.
 //Author Unknown (Initial Commit)
 #define LilysPoiseID 206
+#define CarefulCoverID 206
 
 //Malefic Aura: Enemies within 2 tiles receive +2 magic damage.
 //Author Unknown (Initial Commit)
@@ -105,7 +107,7 @@
 
 //Tantivy: +10 Hit/Avoid if there are no allies within 3 tiles.
 //Author Unknown (Initial Commit)
-#define TantivyID 209
+#define TantivyID 255
 
 //Up With Arch: Adjacent ally units gain might equal to half this unit's might. (Only if name starts with "Arch")
 //Author Unknown (Initial Commit)
@@ -1251,7 +1253,7 @@
 
 //Ardent Sacrifice: Restores 10 HP to target, but drops user’s HP by 10. 
 //By Vesly 
-#define ArdentSacrificeID 255
+#define ArdentSacrificeID 107
 
 //Reciprocal Aid: User and target ally switch their current HP totals. 
 //By Vesly 
@@ -1274,7 +1276,7 @@
 
 //Savior: Can rescue without penalties.
 //Author Unknown (Initial Commit)
-#define SaviorID 107
+#define SaviorID 255
 
 //Discipline: Weapon experience gains are doubled.
 //Author Unknown (Initial Commit)

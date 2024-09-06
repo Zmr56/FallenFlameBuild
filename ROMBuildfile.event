@@ -8,7 +8,7 @@
 
     //Text first for Text ID definitions
 	#incbin "Tables/Vanilla Text Table.dmp"
-    #include "Text/Install Text Data.event"
+    #include "Text/InstallTextData.event"
     MESSAGE Used text space ends at currentOffset
 
     //CSV tables
@@ -21,11 +21,11 @@
 
 	#ifdef USE_TEST_MAP
     //Events
-    #include "Events/Release_map.event"
 	#include "Events/Master Events Installer.event"
     #include "Events/WorldMapEvents.event"
 
     //Maps
+	#include "Maps/Tileset and Anims Installer.event"
     #include "Maps/MasterMapInstaller.event"
     #endif // USE_TEST_MAP
 	

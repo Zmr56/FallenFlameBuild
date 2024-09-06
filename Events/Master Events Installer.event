@@ -6,10 +6,15 @@ SVAL r2 0 // Player allegiance
 CALL 0x89EE1B8 // When matching allegiance stops in range, Eg. if not player, ENDB 
 NoFade
 ENDA 
-/*
+
 ALIGN 4
 {
   #include "Prologue.event"
 }
-*/
+
+ALIGN 4
+{
+  #include "Ch1.event"
+}
+
 

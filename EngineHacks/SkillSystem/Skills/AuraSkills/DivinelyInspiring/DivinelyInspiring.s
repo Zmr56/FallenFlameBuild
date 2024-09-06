@@ -17,13 +17,6 @@ mov r3, #1 @max range of receiving bonus
 cmp r0, #0
 beq Done
 
-@testing
-mov r0, r4
-add r0, #0x5c @attacker defense
-ldrh r3, [r0]
-add r3, #1 @add 1
-strh r3, [r0]
-
 mov r0, r4
 add r0, #0x5A @attacker's damage.
 ldrh r3, [r0]

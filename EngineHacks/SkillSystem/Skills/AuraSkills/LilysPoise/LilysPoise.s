@@ -19,12 +19,6 @@ mov r3, #1 @range
 cmp r0, #0
 beq Done
 
-mov r0, r4
-add     r0,#0x5A    @Move to the attacker's dmg.
-ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r3,#1    @add 1 to the attacker's dmg.
-strh    r3,[r0]     @Store.
-
 @ mov r0, r5
 @ add     r0,#0x5A    @Move to the defender's dmg.
 @ ldrh    r3,[r0]     @Load the defender's dmg into r3.

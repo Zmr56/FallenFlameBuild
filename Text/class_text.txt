@@ -1,0 +1,8 @@
+## SwordFighterID
+Swd. Fighter[X]
+
+## LanceFighterID
+Lnc. Fighter[X]
+
+## AxeFighterID
+Axe Fighter[X]

@@ -7,7 +7,7 @@ WTTable:
 TwoWayWTEntry(Swords,Axes,15,3)
 TwoWayWTEntry(Swords,Anima,15,3)
 TwoWayWTEntry(Lances,Swords,15,3)
-TwoWayWTEntry(Lances,Anima,15,3)
+TwoWayWTEntry(Lances,Dark,15,3)
 TwoWayWTEntry(Axes,Lances,15,3)
 TwoWayWTEntry(Axes,Light,15,3)
 TwoWayWTEntry(Anima,Light,15,3)
