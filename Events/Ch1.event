@@ -50,6 +50,7 @@ LocationBasedEvents:
 Vendor(ShopItems1, 12, 8)
 Armory(ArmoryList, 11, 9)
 Seize(2,0)
+Seize(13,10)
 END_MAIN
 
 ShopItems1:

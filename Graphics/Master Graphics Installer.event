@@ -1,0 +1,29 @@
+PUSH
+ORG $59EE20
+#incext Png2Dmp "MiscGraphics/player.png" --palette-only
+POP
+
+PUSH
+ORG $59EE40
+#incext Png2Dmp "MiscGraphics/enemy.png" --palette-only
+POP
+
+PUSH
+ORG $59EE60
+#incext Png2Dmp "MiscGraphics/npc.png" --palette-only
+POP
+
+PUSH
+ORG $59EE80
+#incext Png2Dmp "MiscGraphics/wait.png" --palette-only
+POP
+
+PUSH
+ORG $59EEA0
+#incext Png2Dmp "MiscGraphics/fourth.png" --palette-only
+POP
+
+//Installers
+#include "Map Sprites/Map Sprites Installer.event"
+
+#include "BattleScreen/Installer.event"

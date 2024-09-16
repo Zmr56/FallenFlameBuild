@@ -51,8 +51,11 @@
 #define LncFighter Soldier
 #define Barbarian Brigand
 #define DarkMage Shaman
-#define SwordCav 0x5
-#define LanceCav 0x6
+#define LanceCav 0x5
+#define SwordCav 0x6
+#define SwordCavF 0x10
+#define AxeCav Tarvos
+#define AxeCavF Maelduin
 
 // Unit definitions
 #define Wren 0x1
@@ -60,9 +63,16 @@
 #define Shamira 0x3
 #define Huginn 0x4
 #define Orvar 0x5
+#define Monte 0x6
+#define Evander 0x7
+#define Iara 0x8
+#define Gad 0x9
+#define Nuri 0xA
+#define Rudyard 0xB
 
 #define Conall Lyon_Ch17
 #define Ratta Morva_Ch20
+#define Wizvil Orson_Ch5x
 
 //Item Defs
 #define GreatSword SilverBlade

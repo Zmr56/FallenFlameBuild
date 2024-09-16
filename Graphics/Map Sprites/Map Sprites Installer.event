@@ -1,0 +1,73 @@
+
+Map_WyvernRiderStand:
+#incext Png2Dmp "WyvernRiderStanding.png" --lz77
+Map_WyvernRiderMoving:
+#incext Png2Dmp "WyvernRiderMoving.png" --lz77
+Map_NomadStand:
+#incext Png2Dmp "NomadStanding.png" --lz77
+Map_NomadMoving:
+#incext Png2Dmp "NomadMoving.png" --lz77
+Map_SwdCavMStand:
+#incext Png2Dmp "SwordCavMStanding.png" --lz77
+Map_SwdCavMMoving:
+#incext Png2Dmp "SwordCavMMoving.png" --lz77
+Map_SwdCavFStand:
+#incext Png2Dmp "SwordCavFStanding.png" --lz77
+Map_SwdCavFMoving:
+#incext Png2Dmp "SwordCavFMoving.png" --lz77
+Map_LncCavMStand:
+#incext Png2Dmp "LncCavMStanding.png" --lz77
+Map_LncCavMMoving:
+#incext Png2Dmp "LncCavMMoving.png" --lz77
+Map_AxeCavMStand:
+#incext Png2Dmp "AxeCavMStanding.png" --lz77
+Map_AxeCavMMoving:
+#incext Png2Dmp "AxeCavMMoving.png" --lz77
+Map_AxeCavFStand:
+#incext Png2Dmp "AxeCavFStanding.png" --lz77
+Map_AxeCavFMoving:
+#incext Png2Dmp "AxeCavFMoving.png" --lz77
+Map_BarbarianStand:
+#incext Png2Dmp "BarbarianStanding.png" --lz77
+Map_BarbarianMoving:
+#incext Png2Dmp "BarbarianMoving.png" --lz77
+Map_FireDragonStand:
+#incext Png2Dmp "FireDragonStanding.png" --lz77
+Map_FireDragonMoving:
+#incext Png2Dmp "FireDragonMoving.png" --lz77
+Map_DivineDragonStand:
+#incext Png2Dmp "DivineDragonStanding.png" --lz77
+Map_DivineDragonMoving:
+#incext Png2Dmp "DivineDragonMoving.png" --lz77
+Map_IceDragonStand:
+#incext Png2Dmp "IceDragonStanding.png" --lz77
+Map_IceDragonMoving:
+#incext Png2Dmp "IceDragonMoving.png" --lz77
+Map_EarthDragonStand:
+#incext Png2Dmp "EarthDragonStanding.png" --lz77
+Map_EarthDragonMoving:
+#incext Png2Dmp "EarthDragonMoving.png" --lz77
+Map_MageDragonStand:
+#incext Png2Dmp "MageDragonStanding.png" --lz77
+Map_MageDragonMoving:
+#incext Png2Dmp "MageDragonMoving.png" --lz77
+Map_SwordFighterMStand:
+#incext Png2Dmp "SwordFighterMStanding.png" --lz77
+Map_SwordFighterMMoving:
+#incext Png2Dmp "SwordFighterMMoving.png" --lz77
+Map_SwordmasterStand:
+#incext Png2Dmp "SwordmasterStanding.png" --lz77
+Map_SwordmasterMoving:
+#incext Png2Dmp "SwordmasterMoving.png" --lz77
+Map_LanceFighterStand:
+#incext Png2Dmp "LanceFighterStanding.png" --lz77
+Map_LanceFighterMoving:
+#incext Png2Dmp "LanceFighterMoving.png" --lz77
+Map_HalberdierStand:
+#incext Png2Dmp "HalberdierStanding.png" --lz77
+Map_HalberdierMoving:
+#incext Png2Dmp "HalberdierMoving.png" --lz77
+Map_DarkMageStand:
+#incext Png2Dmp "DarkMageStanding.png" --lz77
+Map_DarkMageMoving:
+#incext Png2Dmp "DarkMageMoving.png" --lz77

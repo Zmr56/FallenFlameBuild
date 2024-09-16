@@ -1,0 +1,216 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.0.0.0                              //
+// Game: FE8                                      //
+// File: FE8_clean.gba                            //
+// Offset: $9EC66C                                //
+//                                                //
+////////////////////////////////////////////////////
+
+EventPointerTable(0xd, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TURN 0x0 WaveFirst[2,0] 0x0
+TURN 0x0 WaveSecond[3,0] 0x0
+TURN 0x0 WaveThird[4,0] 0x0
+TURN 0x0 WaveFourth[5,0] 0x0
+TURN 0x0 WaveFifth[6,0] 0x0
+TURN 0x0 WaveSixth[7,0] 0x0
+TURN 0xA EndingScene [8,0] 0x0
+END_MAIN
+
+WaveFirst:
+ReinforcementEvent(Wave1)
+ENDA
+
+WaveSecond:
+ReinforcementEvent(Wave2)
+ENDA
+
+WaveThird:
+ReinforcementEvent(Wave3)
+ENDA
+
+WaveFourth:
+ReinforcementEvent(Wave4)
+ENDA
+
+WaveFifth:
+ReinforcementEvent(Wave5)
+ENDA
+
+WaveSixth:
+ReinforcementEvent(Wave6)
+ENDA
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Chest(RedGem,14,14)
+Chest(RedGem,14,1)
+END_MAIN
+
+
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Traps1:
+END_MAIN
+
+Traps2:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Wren WrenLord Wren Level(1, Ally, 0) [7,5] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin Wren Level(1, Ally, 0) [7,6] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Gilliam Knight_F Wren Level(1, Ally, 0) [5,5] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Franz AxeFighter Wren Level(1, Ally, 0) [6,4] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Moulder Archer Wren Level(1, Ally, 0) [9,5] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Vanessa Priest Wren Level(1, Ally, 0) [8,4] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Ross LncFighter Wren Level(1, Ally, 0) [8,6] 0x00 0x00 0x0 0x00 [0x00] NoAI  
+UNIT
+
+NewCrew:
+UNIT Iara Mage_F Wren Level(1, Ally, 0) [6,6] 0x00 0x00 0x0 0x00 [Fimbulvetr] NoAI 
+UNIT Nuri AxeCavF Wren Level(1, Ally, 0) [6,5] 0x00 0x00 0x0 0x00 [IronAxe, HandAxe] NoAI 
+UNIT Gad Thief Wren Level(3, Ally, 0) [8,5] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary] NoAI 
+UNIT Fado Swordmaster Wren Level(5, NPC, 0) [7,8] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary] AttackInRangeAI
+UNIT Ismaire Queen Wren Level(1, NPC, 0) [7,4] 0x00 0x00 0x0 0x00 [0x00] DoNothing  
+UNIT
+
+Bad:
+UNIT Wizvil Shaman 0x00 Level(5, Enemy, 0) [7,14] 0x00 0x00 0x0 0x00 [Nosferatu, Elfire] AttackInRangeAI 
+UNIT 0x80 LncFighter Wizvil Level(1, Enemy, 1) [2,8] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 LncFighter Wizvil Level(1, Enemy, 1) [3,9] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 LncFighter Wizvil Level(1, Enemy, 1) [13,9] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 LncFighter Wizvil Level(1, Enemy, 1) [12,10] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 Archer Wizvil Level(1, Enemy, 1) [0,2] 0x00 0x00 0x0 0x00 [IronBow] PursueWithoutHeedAI 
+UNIT 0x80 SwordCav Wizvil Level(1, Enemy, 1) [0,13] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
+UNIT 0x80 SwordCav Wizvil Level(1, Enemy, 1) [1,14] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
+UNIT 0x80 SwordCav Wizvil Level(1, Enemy, 1) [11,14] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
+UNIT 0x80 SwordCav Wizvil Level(1, Enemy, 1) [10,13] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
+UNIT 0x80 Barbarian Wizvil Level(1, Enemy, 1) [0,0] 0x00 0x00 0x0 0x00 [SteelAxe] PursueWithoutHeedAI 
+UNIT Innes LanceCav Wizvil Level(1, Enemy, 0) [3,6] 0x00 0x00 0x0 0x00 [SteelLance, Horseslayer] DoNothing 
+UNIT
+
+Wave1:
+UNIT 0x80 SwdFighter Wizvil Level(2, Enemy, 1) [1,0] 0x00 0x00 0x0 0x00 [IronSword] PursueWithoutHeedAI 
+UNIT 0x80 SwdFighter Wizvil Level(2, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [IronSword] PursueWithoutHeedAI 
+UNIT 0x80 AxeFighter Wizvil Level(2, Enemy, 1) [14,3] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT 0x80 AxeFighter Wizvil Level(2, Enemy, 1) [14,4] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT
+
+Wave2:
+UNIT 0x80 LncFighter Wizvil Level(2, Enemy, 1) [0,13] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI 
+UNIT 0x80 Archer Wizvil Level(2, Enemy, 1) [0,14] 0x00 0x00 0x0 0x00 [IronBow] PursueWithoutHeedAI 
+UNIT 0x80 LncFighter Wizvil Level(2, Enemy, 1) [14,9] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI 
+UNIT 0x80 Archer Wizvil Level(2, Enemy, 1) [14,10] 0x00 0x00 0x0 0x00 [IronBow] PursueWithoutHeedAI 
+UNIT
+
+Wave3:
+UNIT 0x80 Barbarian Wizvil Level(2, Enemy, 1) [1,0] 0x00 0x00 0x0 0x00 [SteelAxe] PursueWithoutHeedAI 
+UNIT 0x80 Barbarian Wizvil Level(2, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [SteelAxe] PursueWithoutHeedAI 
+UNIT 0x80 DarkMage Wizvil Level(2, Enemy, 1) [14,3] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT 0x80 Archer Wizvil Level(2, Enemy, 1) [14,4] 0x00 0x00 0x0 0x00 [IronBow] PursueWithoutHeedAI
+UNIT
+
+Wave4:
+UNIT 0x80 LncFighter Wizvil Level(2, Enemy, 1) [0,13] 0x00 0x00 0x0 0x00 [Javelin, SteelLance] PursueWithoutHeedAI 
+UNIT 0x80 SwordCav Wizvil Level(2, Enemy, 1) [0,14] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
+UNIT 0x80 LncFighter Wizvil Level(2, Enemy, 1) [14,9] 0x00 0x00 0x0 0x00 [Javelin, SteelLance] PursueWithoutHeedAI 
+UNIT 0x80 SwordCav Wizvil Level(2, Enemy, 1) [14,10] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI
+UNIT
+
+Wave5:
+UNIT 0x80 Barbarian Wizvil Level(3, Enemy, 1) [1,0] 0x00 0x00 0x0 0x00 [SteelAxe] PursueWithoutHeedAI 
+UNIT 0x80 DarkMage Wizvil Level(3, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT 0x80 DarkMage Wizvil Level(3, Enemy, 1) [14,3] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT 0x80 Archer Wizvil Level(3, Enemy, 1) [14,4] 0x00 0x00 0x0 0x00 [IronBow] PursueWithoutHeedAI
+UNIT
+
+Wave6:
+UNIT 0x80 LncFighter Wizvil Level(3, Enemy, 1) [1,0] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI 
+UNIT 0x80 AxeCav Wizvil Level(3, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [SteelAxe] PursueWithoutHeedAI 
+UNIT 0x80 LncFighter Wizvil Level(3, Enemy, 1) [1,0] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI 
+UNIT 0x80 SwordCav Wizvil Level(3, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
+UNIT 0x80 AxeFighter Wizvil Level(3, Enemy, 1) [14,3] 0x00 0x00 0x0 0x00 [SteelAxe] PursueWithoutHeedAI 
+UNIT 0x80 SwdFighter Wizvil Level(3, Enemy, 1) [14,4] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI
+UNIT 0x80 AxeFighter Wizvil Level(3, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [SteelAxe] PursueWithoutHeedAI 
+UNIT 0x80 SwdFighter Wizvil Level(3, Enemy, 1) [0,8] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Wizvil Level(2, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT 0x80 WyvernRider Wizvil Level(2, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT 0x80 WyvernRider Wizvil Level(2, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT
+
+SetGameOver:
+CHECK_ALLEGIANCE 0xFFFF
+SVAL 0x1 0x2
+BNE 0x1 0xC 0x1 //branch to label 1 if unit is not enemy
+ASMC 0x00D391 //game over
+GOTO 2
+LABEL 1
+ENUF 0x9 //allow event to repeat
+LABEL 2
+NoFade
+ENDA
+
+BeginningScene:
+/*
+MUSC 0x40
+SetBackground(0x07)
+Text(Ch2OpeningText1)
+TEXTEND
+CALL $9EE2C4 //BGEnd
+ENUN
+*/
+LOAD3 0x1 Units1
+ENUN
+LOAD1 0x1 NewCrew
+ENUN
+LOAD1 0x1 Bad
+ENUN
+NoFade
+ENDA
+
+EndingScene:
+/*
+MUSC 0x32
+SetBackground(0x07)
+Text(Ch2ClosingText1)
+TEXTEND
+CALL $9EE2C4 //BGEnd
+ENUN
+*/
+MNCH 0x3
+NoFade
+ENDA
