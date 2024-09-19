@@ -76,4 +76,8 @@
 
 //Item Defs
 #define GreatSword SilverBlade
+#define Elwind Aircalibur
+#define Wind 0xbd
+#define Sleet 0xbe
+#define Wilderwind 0xbf
 

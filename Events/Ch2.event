@@ -101,8 +101,8 @@ UNIT Ross LncFighter Wren Level(1, Ally, 0) [8,6] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 NewCrew:
-UNIT Iara Mage_F Wren Level(1, Ally, 0) [6,6] 0x00 0x00 0x0 0x00 [Fimbulvetr] NoAI 
-UNIT Nuri AxeCavF Wren Level(1, Ally, 0) [6,5] 0x00 0x00 0x0 0x00 [IronAxe, HandAxe] NoAI 
+UNIT Iara Mage_F Wren Level(1, Ally, 0) [6,6] 0x00 0x00 0x0 0x00 [Wind, Vulnerary] NoAI 
+UNIT Nuri AxeCavF Wren Level(1, Ally, 0) [6,5] 0x00 0x00 0x0 0x00 [IronAxe, SteelAxe] NoAI 
 UNIT Gad Thief Wren Level(3, Ally, 0) [8,5] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary] NoAI 
 UNIT Fado Swordmaster Wren Level(5, NPC, 0) [7,8] 0x00 0x00 0x0 0x00 [IronSword, Vulnerary] AttackInRangeAI
 UNIT Ismaire Queen Wren Level(1, NPC, 0) [7,4] 0x00 0x00 0x0 0x00 [0x00] DoNothing  

@@ -1094,9 +1094,9 @@ ORG SkillIcon(AdvantageChaserID)
 ORG SkillIcon(DrawBackID)
 #incbin "SkillIcons/Acrobat.dmp"
 ORG SkillIcon(SacrificeID)
-#incbin "SkillIcons/Acrobat.dmp"
+#incbin "SkillIcons/Sacrifice.dmp"
 ORG SkillIcon(ArdentSacrificeID)
-#incbin "SkillIcons/Acrobat.dmp"
+#incbin "SkillIcons/Sacrifice.dmp"
 ORG SkillIcon(ReciprocalAidID)
 #incbin "SkillIcons/Acrobat.dmp"
 ORG SkillIcon(FailGaleID)

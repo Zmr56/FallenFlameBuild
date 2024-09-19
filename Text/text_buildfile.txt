@@ -116,6 +116,15 @@ Cost[X]
 A scroll that teaches[N]
 a skill when used.[X]
 
+## WindID
+Wind[X]
+
+## SleetID
+Sleet[X]
+
+## WilderwindID
+Wilderwind[X]
+
 #include "unitmenu_text.txt"
 
 #include "skilldesc_text.txt"

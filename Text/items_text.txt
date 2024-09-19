@@ -1,2 +1,5 @@
 #0x35A GreatSwordID
 Great Sword[X]
+
+#0x3AC ElwindID
+Elwind[X]

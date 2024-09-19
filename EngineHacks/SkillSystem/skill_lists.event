@@ -21,6 +21,7 @@ ALIGN 4
 
 CavalierSkillList:
 BYTE 1 SwapID
+ALIGN 4
 
 PaladinSkillList:
 BYTE 255 SwapID
