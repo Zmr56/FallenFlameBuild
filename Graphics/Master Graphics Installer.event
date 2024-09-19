@@ -27,3 +27,4 @@ POP
 #include "Map Sprites/Map Sprites Installer.event"
 
 #include "BattleScreen/Installer.event"
+#include "CSAFE8/Master Spell Animation Installer.event"

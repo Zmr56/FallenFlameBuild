@@ -81,3 +81,6 @@
 #define Sleet 0xbe
 #define Wilderwind 0xbf
 
+// Spells
+#define Wind_index 0x1c
+
