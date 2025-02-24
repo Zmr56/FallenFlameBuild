@@ -242,5 +242,11 @@ GuidingEyes:
 POIN NewAuraSkillCheck
 WORD GuidingEyesID
 
+ALIGN 4
+WardingGrace:
+#incbin "WardingGrace/WardingGrace.dmp"
+POIN NewAuraSkillCheck
+WORD WardingGraceID
+
 #include "ClassTypeSkills/ClassTypeSkills.event"
 

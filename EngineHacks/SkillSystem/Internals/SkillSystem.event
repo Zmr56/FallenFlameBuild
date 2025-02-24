@@ -354,6 +354,7 @@ NegatedSkillEntry(WoodfellerID)
 NegatedSkillEntry(SwashbucklerID)
 NegatedSkillEntry(HuntersSightID)
 NegatedSkillEntry(GuidingEyesID)
+NegatedSkillEntry(WardingGraceID)
 
 
 /*

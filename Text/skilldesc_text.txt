@@ -1900,3 +1900,8 @@ when battling at 2 range.[X]
 Guiding Eyes:[N]
 Adjacent allies gain +15 Hit when[N]
 battling at 3 range or more.[X]
+
+## SD_WardingGrace
+Warding Grace:[N]
+Adjacent magic wielding enemies[N]
+deal -8 Dmg.[X]
