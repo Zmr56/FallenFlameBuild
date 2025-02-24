@@ -1243,4 +1243,7 @@ ORG SkillIcon(GuidingEyesID)
 ORG SkillIcon(WardingGraceID)
 #incbin "SkillIcons/Acrobat.dmp"
 
+ORG SkillIcon(MysticMenaceID)
+#incbin "SkillIcons/Acrobat.dmp"
+
 ORG SkillIcons+0x8000

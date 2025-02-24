@@ -248,5 +248,11 @@ WardingGrace:
 POIN NewAuraSkillCheck
 WORD WardingGraceID
 
+ALIGN 4
+MysticMenace:
+#incbin "MysticMenace/MysticMenace.dmp"
+POIN NewAuraSkillCheck
+WORD MysticMenaceID
+
 #include "ClassTypeSkills/ClassTypeSkills.event"
 

@@ -1905,3 +1905,8 @@ battling at 3 range or more.[X]
 Warding Grace:[N]
 Adjacent magic wielding enemies[N]
 deal -8 Dmg.[X]
+
+## SD_MysticMenace
+Mystic Menace:[N]
+Adjacent magic wielding enemies[N]
+lose -8 Def.[X]
