@@ -7,7 +7,6 @@ ALIGN 4
 
 EirikaLordSkillList:
 BYTE 1 CharismaID
-BYTE 1 SwordEdgeID
 BYTE 00 00
 ALIGN 4
 
@@ -17,7 +16,7 @@ BYTE 00 00
 ALIGN 4
 
 EirikaGreatLordSkillList:
-BYTE 1 SupplyID
+BYTE 1 CharismaID
 BYTE 00 00
 ALIGN 4
 

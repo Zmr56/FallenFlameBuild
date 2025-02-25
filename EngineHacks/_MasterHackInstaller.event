@@ -222,8 +222,9 @@ POP
   #include "Necessary/GrowthGetters/GrowthGetters.event"
   
   //Fallen Flame
-  //ALIGN 4
+  ALIGN 4
   //#include "FallenFlame/WinButton.event"
+  #include "FallenFlame/ThraciaTrading.event"
   
   ALIGN 4
   #include "Necessary/IconRework/IconRework.event"   // Allows using standard Icon routines to draw skill icons

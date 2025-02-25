@@ -1,3 +1,4 @@
 #include "Ch1.event"
 #include "Ch2.event"
+#include "Ch3.event"
 #include "Prologue.event"

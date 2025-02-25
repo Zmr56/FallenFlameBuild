@@ -19,6 +19,12 @@ BlumariFields:
 
 EventPointerTable(0x2, BlumariFields)
 
+ALIGN 4
+BlumariTown:
+#incbin "Tileset/BlumariTownSet.pal.bin"
+
+EventPointerTable(0x0F, BlumariTown)
+
 //TileConfig
 ALIGN 4
 BlumariCastleConfig:

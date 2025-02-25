@@ -1,0 +1,192 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.0.0.0                              //
+// Game: FE8                                      //
+// File: FE8_clean.gba                            //
+// Offset: $9EC66C                                //
+//                                                //
+////////////////////////////////////////////////////
+
+EventPointerTable(0x14, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+//TURN 0x0 Wave1Text[2,0] 0x0
+//TURN 0x0 WaveFirst[7,0] 0x0
+//TURN 0x0 WaveSecond[8,0] 0x0
+
+END_MAIN
+
+WaveFirst:
+ReinforcementEvent(Wave1)
+ENDA
+/*
+Wave1Text:
+Text(Ch1Wave1Text)
+TEXTEND
+ENDA
+*/
+WaveSecond:
+ReinforcementEvent(Wave2)
+ENDA
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Vendor(ShopItems1, 8, 9)
+Armory(ArmoryList, 13, 9)
+Chest(GreatLance,14,14)
+Chest(Halberd,4,3)
+Village(0x7,VillageWyrm,9,5)
+Village(0x8,VillageRecruit,14,13)
+Seize(1,1)
+Seize(13,10)
+END_MAIN
+
+ShopItems1:
+SHLI Wind Heal Vulnerary PureWater
+ALIGN 4
+
+ArmoryList:
+SHLI IronSword SteelSword IronLance Javelin IronAxe IronBow
+ALIGN 4
+
+VillageRecruit:
+Text(HouseText)
+LOAD1 0x1 AdelaJoin
+ENUN
+NoFade
+ENDA
+
+AdelaJoin:
+UNIT Natasha Troubadour Wren Level(1, Ally, 0) [14,14] 0x00 0x00 0x0 0x00 [Heal, Vulnerary] NoAI 
+UNIT
+
+VillageWyrm:
+VillageEventItem(HouseText, HouseBG, Wyrmslayer)
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Traps1:
+END_MAIN
+
+Traps2:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Wren WrenLord 0x00 Level(1, Ally, 0) [1,13] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Dana SwordCav Wren Level(4, Ally, 0) [2,13] 0x00 0x00 0x0 0x00 [IronSword, SteelSword] NoAI
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [0,12] 0x00 0x00 0x0 0x00 [0x00] NoAI  
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [0,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [0,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [1,14] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [2,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [3,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [3,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [4,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Wren Level(1, Ally, 0) [4,14] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT
+
+Units2:
+UNIT Dana SwordCav Wren Level(4, Ally, 0) [2,13] 0x00 0x00 0x0 0x00 [IronSword, SteelSword] NoAI 
+UNIT
+
+Bad:
+UNIT Valter_Ch15_ Paladin 0x00 Level(1, Enemy, 0) [1,1] 0x00 0x00 0x0 0x00 [SilverSword, Javelin] NeverMoveAI 
+UNIT 0x80 Knight Valter_Ch15_ Level(4, Enemy, 1) [9,0] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
+UNIT 0x80 Knight Valter_Ch15_ Level(4, Enemy, 1) [9,1] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
+UNIT 0x80 SwdFighter Valter_Ch15_ Level(3, Enemy, 1) [3,1] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT 0x80 SwdFighter Valter_Ch15_ Level(3, Enemy, 1) [4,2] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT 0x80 Archer Valter_Ch15_ Level(3, Enemy, 1) [3,2] 0x00 0x00 0x0 0x00 [SteelBow] AttackInRangeAI 
+UNIT 0x80 LncFighter Valter_Ch15_ Level(2, Enemy, 1) [5,7] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(2, Enemy, 1) [6,6] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT 0x80 LncFighter Valter_Ch15_ Level(2, Enemy, 1) [10,11] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(2, Enemy, 1) [11,12] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT 0x80 Knight Valter_Ch15_ Level(3, Enemy, 1) [13,5] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
+UNIT 0x80 Knight Valter_Ch15_ Level(3, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [14,0] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [1,3] 0x00 0x00 0x0 0x00 [Hammer] AttackInRangeAI 
+UNIT 0x80 Archer Valter_Ch15_ Level(3, Enemy, 1) [12,2] 0x00 0x00 0x0 0x00 [SteelBow] PursueWithoutHeedAI
+UNIT 0x80 Archer Valter_Ch15_ Level(3, Enemy, 1) [13,2] 0x00 0x00 0x0 0x00 [SteelBow] PursueWithoutHeedAI  
+UNIT 0x80 DarkMage Valter_Ch15_ Level(3, Enemy, 1) [12,3] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT 0x80 DarkMage Valter_Ch15_ Level(3, Enemy, 1) [13,3] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [5,1] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI 
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [6,1] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI
+UNIT
+
+Wave1:
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [14,0] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [0,11] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT
+
+Wave2:
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [14,0] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [0,11] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 LncFighter Valter_Ch15_ Level(4, Enemy, 1) [1,2] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 LncFighter Valter_Ch15_ Level(4, Enemy, 1) [3,2] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT
+
+BeginningScene:
+/*
+MUSC 0x25
+SetBackground(0x03)
+Text(Ch1OpeningText1)
+TEXTEND
+CALL $9EE2C4 //BGEnd
+ENUN
+*/
+LOAD3 0x0 Units1
+ENUN
+LOAD1 0x1 Units2
+ENUN
+LOAD1 0x1 Bad
+ENUN
+NoFade
+PREP
+ENDA
+
+EndingScene:
+/*
+MUSC 0x31
+SetBackground(0x15)
+Text(Ch1ClosingText1)
+TEXTEND
+CALL $9EE2C4 //BGEnd
+SetBackground(0x0A)
+Text(Ch1ClosingText2)
+TEXTEND
+CALL $9EE2C4 //BGEnd
+*/
+MNC2 0x4
+NoFade
+ENDA

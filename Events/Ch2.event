@@ -74,8 +74,9 @@ ENDA
 LocationBasedEvents:
 Door(13,0)
 Door(13,13)
-Chest(Barrier,14,14)
-Chest(HandAxe,14,1)
+Chest(Talisman,14,14)
+Chest(RedGem,14,1)
+Seize(7,5)
 END_MAIN
 
 MiscBasedEvents:
@@ -131,8 +132,7 @@ UNIT 0x80 SwordCav Wizvil Level(1, Enemy, 1) [1,14] 0x00 0x00 0x0 0x00 [SteelSwo
 UNIT 0x80 SwordCav Wizvil Level(1, Enemy, 1) [11,14] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
 UNIT 0x80 SwordCav Wizvil Level(1, Enemy, 1) [10,13] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
 UNIT 0x80 Barbarian Wizvil Level(1, Enemy, 1) [0,0] 0x00 0x00 0x0 0x00 [SteelAxe] [0x0,0xE, 0xC, 0x0]
-UNIT 0x80 AxeFighter Wizvil Level(1, Enemy, 1) [1,4] 0x00 0x00 0x0 0x00 [SteelAxe] PursueWithoutHeedAI 
-UNIT 0x80 SwdFighter Wizvil Level(1, Enemy, 1) [6,9] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI
+UNIT 0x80 LncFighter Wizvil Level(1, Enemy, 1) [3,2] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
 UNIT Innes LanceCav Wizvil Level(1, Enemy, 0) [3,6] 0x00 0x00 0x0 0x00 [SteelLance, Horseslayer, Vulnerary] DoNothing 
 UNIT
 
@@ -216,7 +216,7 @@ TEXTEND
 CALL $9EE2C4 //BGEnd
 ENUN
 */
-LOAD3 0x1 Units1
+LOAD3 0x0 Units1
 ENUN
 LOAD1 0x1 NewCrew
 ENUN
@@ -234,6 +234,6 @@ TEXTEND
 CALL $9EE2C4 //BGEnd
 ENUN
 */
-MNCH 0x3
+MNC2 0x3
 NoFade
 ENDA

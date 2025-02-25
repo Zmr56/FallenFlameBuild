@@ -571,11 +571,11 @@
 
 //Chivalry: When foe is at full HP, attack and def/res +2.
 //Author Unknown (Initial Commit)
-#define ChivalryID 212
+#define ChivalryID 255
 
 //Pragmatic: When foe is not at full HP, attack +3 and def/res+1.
 //Author Unknown (Initial Commit)
-#define PragmaticID 227
+#define PragmaticID 255
 
 //Defiant Avoid/Crit: When HP is 25% or lower, gain +30 Avoid or Crit.
 //By Sme
@@ -1178,8 +1178,8 @@
 #define RallySklID 255
 #define RallySpdID 255
 #define RallyLukID 76
-#define RallyDefID 74
-#define RallyResID 75
+#define RallyDefID 255
+#define RallyResID 255
 #define RallyMovID 77
 #define RallySpectrumID 78
 
@@ -1459,19 +1459,19 @@
 
 //Woodfeller: Reverse AVO terrain bonuses from adjacent Lance wielding foes.
 //By Jester
-#define WoodfellerID 255
+#define WoodfellerID 74
 
 //Swashbuckler: Reverse AVO terrain bonuses from adjacent axe wielding foes.
 //By Jester
-#define SwashbucklerID 255
+#define SwashbucklerID 75
 
 //Hunters Sight: Adjacent allies gain +15 Hit when battling at 2 range.
 //By Jester
-#define HuntersSightID 255
+#define HuntersSightID 212
 
 //Guiding Eyes: Adjacent allies gain +15 Hit when battling at 3 range or more.
 //By Jester
-#define GuidingEyesID 255
+#define GuidingEyesID 227
 
 //Warding Grace: Adjacent magic wielding enemies deal -8 Dmg.
 //By Jester

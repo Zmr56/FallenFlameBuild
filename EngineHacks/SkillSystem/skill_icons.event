@@ -1229,13 +1229,13 @@ ORG SkillIcon(MountainManID)
 #incbin "SkillIcons/Acrobat.dmp"
 
 ORG SkillIcon(WoodfellerID)
-#incbin "SkillIcons/Acrobat.dmp"
+#incbin "SkillIcons/Woodfeller.dmp"
 
 ORG SkillIcon(SwashbucklerID)
 #incbin "SkillIcons/Acrobat.dmp"
 
 ORG SkillIcon(HuntersSightID)
-#incbin "SkillIcons/Acrobat.dmp"
+#incbin "SkillIcons/HuntersSight.dmp"
 
 ORG SkillIcon(GuidingEyesID)
 #incbin "SkillIcons/Acrobat.dmp"
