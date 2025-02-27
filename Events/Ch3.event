@@ -25,36 +25,56 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 //TURN 0x0 Wave1Text[2,0] 0x0
-//TURN 0x0 WaveFirst[7,0] 0x0
-//TURN 0x0 WaveSecond[8,0] 0x0
+TURN 0x0 WaveFirst[2,0] 0x0
+TURN 0x0 WaveSecond[4,0] 0x0
 
 END_MAIN
+
+/*
+Wave1Text:
+Text(Ch3Wave1Text)
+TEXTEND
+ENDA
+*/
 
 WaveFirst:
 ReinforcementEvent(Wave1)
 ENDA
-/*
-Wave1Text:
-Text(Ch1Wave1Text)
-TEXTEND
-ENDA
-*/
+
 WaveSecond:
 ReinforcementEvent(Wave2)
+ENDA
+
+WaveASpawn:
+CHECK_ALLEGIANCE 0xFFFF
+SVAL 0x1 0x2
+BNE 0x1 0xC 0x1 //branch to label 1 if unit is not enemy
+ENUF 0x9 //allow event to repeat
+GOTO 2
+LABEL 1
+ReinforcementEvent(WaveA)
+LABEL 2
+NoFade
+ENDA
+//ReinforcementEvent(WaveA)
+//ENDA
+
+WaveBSpawn:
+ReinforcementEvent(WaveB)
 ENDA
 
 CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Vendor(ShopItems1, 8, 9)
-Armory(ArmoryList, 13, 9)
-Chest(GreatLance,14,14)
-Chest(Halberd,4,3)
-Village(0x7,VillageWyrm,9,5)
-Village(0x8,VillageRecruit,14,13)
-Seize(1,1)
-Seize(13,10)
+Vendor(ShopItems1, 9, 10)
+Armory(ArmoryList, 15, 10)
+Chest(GreatLance,5,0)
+Chest(Halberd,5,4)
+Village(0x7,VillageWyrm,10,6)
+Village(0x8,VillageRecruit,15,14)
+Seize(2,1)
+Seize(2,14)
 END_MAIN
 
 ShopItems1:
@@ -73,7 +93,7 @@ NoFade
 ENDA
 
 AdelaJoin:
-UNIT Natasha Troubadour Wren Level(1, Ally, 0) [14,14] 0x00 0x00 0x0 0x00 [Heal, Vulnerary] NoAI 
+UNIT Natasha Troubadour Wren Level(1, Ally, 0) [15,15] 0x00 0x00 0x0 0x00 [Heal, Vulnerary] NoAI 
 UNIT
 
 VillageWyrm:
@@ -81,6 +101,8 @@ VillageEventItem(HouseText, HouseBG, Wyrmslayer)
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AREA 0x9 WaveASpawn [9, 5] [16, 9]
+AREA 0xA WaveBSpawn [0, 0] [8, 4]
 END_MAIN
 
 Dunno1:
@@ -102,58 +124,76 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Wren WrenLord 0x00 Level(1, Ally, 0) [1,13] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Dana SwordCav Wren Level(4, Ally, 0) [2,13] 0x00 0x00 0x0 0x00 [IronSword, SteelSword] NoAI
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [0,12] 0x00 0x00 0x0 0x00 [0x00] NoAI  
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [0,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [0,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [1,14] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [2,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [3,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [3,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [4,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord Wren Level(1, Ally, 0) [4,14] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Dana SwordCav Eirika Level(4, Ally, 0) [2,15] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EirikaLord 0x00 Level(1, Ally, 0) [2,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [1,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [1,15] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [3,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [3,15] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [2,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [0,15] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [1,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [0,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [1,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
 UNIT
 
 Units2:
-UNIT Dana SwordCav Wren Level(4, Ally, 0) [2,13] 0x00 0x00 0x0 0x00 [IronSword, SteelSword] NoAI 
+UNIT Dana SwordCav Wren Level(4, Ally, 0) [2,15] 0x00 0x00 0x0 0x00 [IronSword, SteelSword] NoAI 
 UNIT
 
 Bad:
-UNIT Valter_Ch15_ Paladin 0x00 Level(1, Enemy, 0) [1,1] 0x00 0x00 0x0 0x00 [SilverSword, Javelin] NeverMoveAI 
-UNIT 0x80 Knight Valter_Ch15_ Level(4, Enemy, 1) [9,0] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
-UNIT 0x80 Knight Valter_Ch15_ Level(4, Enemy, 1) [9,1] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
-UNIT 0x80 SwdFighter Valter_Ch15_ Level(3, Enemy, 1) [3,1] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
-UNIT 0x80 SwdFighter Valter_Ch15_ Level(3, Enemy, 1) [4,2] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
-UNIT 0x80 Archer Valter_Ch15_ Level(3, Enemy, 1) [3,2] 0x00 0x00 0x0 0x00 [SteelBow] AttackInRangeAI 
-UNIT 0x80 LncFighter Valter_Ch15_ Level(2, Enemy, 1) [5,7] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
-UNIT 0x80 AxeCav Valter_Ch15_ Level(2, Enemy, 1) [6,6] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT 0x80 LncFighter Valter_Ch15_ Level(2, Enemy, 1) [10,11] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
-UNIT 0x80 AxeCav Valter_Ch15_ Level(2, Enemy, 1) [11,12] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT 0x80 Knight Valter_Ch15_ Level(3, Enemy, 1) [13,5] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
-UNIT 0x80 Knight Valter_Ch15_ Level(3, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
-UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [14,0] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [1,3] 0x00 0x00 0x0 0x00 [Hammer] AttackInRangeAI 
-UNIT 0x80 Archer Valter_Ch15_ Level(3, Enemy, 1) [12,2] 0x00 0x00 0x0 0x00 [SteelBow] PursueWithoutHeedAI
-UNIT 0x80 Archer Valter_Ch15_ Level(3, Enemy, 1) [13,2] 0x00 0x00 0x0 0x00 [SteelBow] PursueWithoutHeedAI  
-UNIT 0x80 DarkMage Valter_Ch15_ Level(3, Enemy, 1) [12,3] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
-UNIT 0x80 DarkMage Valter_Ch15_ Level(3, Enemy, 1) [13,3] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
-UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [5,1] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
-UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
-UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI 
-UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [6,1] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI
+UNIT 0x80 Archer Valter_Ch15_ Level(4, Enemy, 1) [2,3] 0x00 0x00 0x0 0x00 [SteelBow] AttackInRangeAI  
+UNIT 0x80 Archer Valter_Ch15_ Level(3, Enemy, 1) [12,13] 0x00 0x00 0x0 0x00 [SteelBow] AttackInRangeAI 
+UNIT 0x80 Archer Valter_Ch15_ Level(3, Enemy, 1) [11,16] 0x00 0x00 0x0 0x00 [SteelBow] AttackInRangeAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(3, Enemy, 1) [6,8] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT 0x80 SwdFighter Valter_Ch15_ Level(3, Enemy, 1) [5,9] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT 0x80 SwdFighter Valter_Ch15_ Level(3, Enemy, 1) [9,13] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(3, Enemy, 1) [10,12] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT 0x80 DarkMage Valter_Ch15_ Level(3, Enemy, 1) [8,11] 0x00 0x00 0x0 0x00 [Elfire] AttackInRangeAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [16,0] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT 0x80 AxeCav Valter_Ch15_ Level(4, Enemy, 1) [11,0] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT 0x80 SwdFighter Valter_Ch15_ Level(4, Enemy, 1) [3,4] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT 0x80 SwdFighter Valter_Ch15_ Level(4, Enemy, 1) [1,2] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT 0x80 DarkMage Valter_Ch15_ Level(4, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI 
+UNIT 0x80 LanceCav Valter_Ch15_ Level(3, Enemy, 1) [13,9] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 LanceCav Valter_Ch15_ Level(3, Enemy, 1) [13,8] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [16,7] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [14,12] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI
+UNIT 0x80 Knight Valter_Ch15_ Level(4, Enemy, 1) [14,4] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
+UNIT 0x80 Knight Valter_Ch15_ Level(4, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI
+UNIT 0x80 Knight Valter_Ch15_ Level(4, Enemy, 1) [6,1] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI 
+UNIT 0x80 Knight Valter_Ch15_ Level(4, Enemy, 1) [6,2] 0x00 0x00 0x0 0x00 [Javelin] NeverMoveAI
+UNIT Valter_Ch15_ Paladin 0x00 Level(1, Enemy, 0) [2,1] 0x00 0x00 0x0 0x00 [SilverSword, Javelin] NeverMoveAI
 UNIT
 
 Wave1:
-UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [14,0] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
-UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [0,11] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [11,1] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [16,1] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 DarkMage Valter_Ch15_ Level(4, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [Flux, Elfire] PursueWithoutHeedAI
+UNIT 0x80 DarkMage Valter_Ch15_ Level(4, Enemy, 1) [15,1] 0x00 0x00 0x0 0x00 [Flux, Elfire] PursueWithoutHeedAI
+UNIT 0x80 LncFighter Valter_Ch15_ Level(1, Enemy, 1) [2,4] 0x00 0x00 0x0 0x00 [IronLance] BrigandAI
 UNIT
 
 Wave2:
-UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [14,0] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
-UNIT 0x80 LanceCav Valter_Ch15_ Level(4, Enemy, 1) [0,11] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
-UNIT 0x80 LncFighter Valter_Ch15_ Level(4, Enemy, 1) [1,2] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
-UNIT 0x80 LncFighter Valter_Ch15_ Level(4, Enemy, 1) [3,2] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 PegasusKnight Valter_Ch15_ Level(5, Enemy, 1) [1,3] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 PegasusKnight Valter_Ch15_ Level(5, Enemy, 1) [2,4] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 PegasusKnight Valter_Ch15_ Level(5, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT
+
+WaveA:
+UNIT 0x80 AxeCav Valter_Ch15_ Level(5, Enemy, 1) [7,16] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
+UNIT 0x80 LanceCav Valter_Ch15_ Level(5, Enemy, 1) [8,16] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 AxeCav Valter_Ch15_ Level(5, Enemy, 1) [13,16] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
+UNIT 0x80 LanceCav Valter_Ch15_ Level(5, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT
+
+WaveB:
+UNIT 0x80 AxeCav Valter_Ch15_ Level(5, Enemy, 1) [7,16] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
+UNIT 0x80 LanceCav Valter_Ch15_ Level(5, Enemy, 1) [8,16] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 AxeCav Valter_Ch15_ Level(5, Enemy, 1) [13,16] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
+UNIT 0x80 LanceCav Valter_Ch15_ Level(5, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 SwdFighter Valter_Ch15_ Level(5, Enemy, 1) [16,7] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI
+UNIT 0x80 PegasusKnight Valter_Ch15_ Level(5, Enemy, 1) [16,12] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
 UNIT
 
 BeginningScene:
@@ -171,6 +211,12 @@ LOAD1 0x1 Units2
 ENUN
 LOAD1 0x1 Bad
 ENUN
+DebuffUnit(Valter_Ch15_, 1, 28)
+DebuffUnit(Valter_Ch15_, 2, 28)
+DebuffUnit(Valter_Ch15_, 3, 28)
+DebuffUnit(Valter_Ch15_, 4, 28)
+DebuffUnit(Valter_Ch15_, 5, 28)
+DebuffUnit(Valter_Ch15_, 6, 28)
 NoFade
 PREP
 ENDA

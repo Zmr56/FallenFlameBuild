@@ -41,15 +41,25 @@ VS1:
   SHORT $80
 
 ALIGN 4
+VD1:
+  SHORT $0 $0 $0 $0 $E10 $0
+
+ALIGN 4
 VS2:
   SHORT $80
 
 ALIGN 4
+VD2:
+  SHORT $0 $0 $0 $0 $E10 $0
+
+ALIGN 4
 MapChangesData:
-  TileMap(0, 4, 0, 1, 1, Chest1)
-  TileMap(1, 4, 3, 1, 1, Chest2)
-  TileMap(2, 9, 5, 1, 1, VS1)
-  TileMap(3, 14, 13, 1, 1, VS2)
+  TileMap(0, 5, 0, 1, 1, Chest1)
+  TileMap(1, 5, 4, 1, 1, Chest2)
+  TileMap(2, 10, 6, 1, 1, VS1)
+  TileMap(3, 9, 5, 3, 2, VD1)
+  TileMap(4, 15, 14, 1, 1, VS2)
+  TileMap(5, 14, 13, 3, 2, VD2)
   TileMapEnd
 
 EventPointerTable(0x13, MapChangesData)
